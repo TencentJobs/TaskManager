@@ -11,6 +11,7 @@
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSTableView *taskTableVIew;
 @end
 
 @implementation AppDelegate
@@ -24,5 +25,15 @@
     // Insert code here to tear down your application
 }
 
+-(CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row{
+    return 30;
+}
 
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
+    return 10;
+}
+
+-(void)tableViewSelectionDidChange:(NSNotification *)notification{
+    NSLog(@"%ld",(long)[self.taskTableVIew numberOfRows]);
+}
 @end
