@@ -8,10 +8,10 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <NSTableViewDelegate, NSTableViewDataSource>
 
 @property (weak) IBOutlet NSWindow *window;
-@property (weak) IBOutlet NSTableView *taskTableVIew;
+@property (weak) IBOutlet NSTableView *mainTableView;
 @end
 
 @implementation AppDelegate
@@ -25,15 +25,20 @@
     // Insert code here to tear down your application
 }
 
--(CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row{
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return 9;
+}
+
+-(CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     return 30;
 }
 
--(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
-    return 10;
-}
-
--(void)tableViewSelectionDidChange:(NSNotification *)notification{
-    NSLog(@"%ld",(long)[self.taskTableVIew numberOfRows]);
+-(NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row{
+    NSTableCellView *cell = (NSTableCellView *)[tableView makeViewWithIdentifier:@"SUNCell" owner:nil];
+    
+    cell.imageView.image = nil;
+    cell.textField.stringValue = @"confiwang";
+    
+    return cell;
 }
 @end
