@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate () <NSTableViewDelegate, NSTableViewDataSource>
+@interface AppDelegate () <NSTableViewDelegate, NSTableViewDataSource, NSWindowDelegate>
 
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTableView *mainTableView;
@@ -96,6 +96,10 @@
     [alert setMessageText:cellView.textField.stringValue];
     [alert runModal];
     return YES;
+}
+
+-(void)windowDidResize:(NSNotification *)notification {
+    NSLog(@"confiwangtest,%f",self.window.frame.size.width);
 }
 
 @end

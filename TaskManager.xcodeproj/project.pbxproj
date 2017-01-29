@@ -11,6 +11,8 @@
 		B70661961DC0E9AD00641FCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B70661951DC0E9AD00641FCC /* main.m */; };
 		B70661981DC0E9AD00641FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B70661971DC0E9AD00641FCC /* Assets.xcassets */; };
 		B706619B1DC0E9AD00641FCC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70661991DC0E9AD00641FCC /* MainMenu.xib */; };
+		B7099BFA1E3D982300E2B654 /* CFTaskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7099BF81E3D982300E2B654 /* CFTaskTableViewController.m */; };
+		B7099BFB1E3D982300E2B654 /* CFTaskTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7099BF91E3D982300E2B654 /* CFTaskTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		B70661971DC0E9AD00641FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B706619A1DC0E9AD00641FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B706619C1DC0E9AD00641FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7099BF71E3D982300E2B654 /* CFTaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTaskTableViewController.h; sourceTree = "<group>"; };
+		B7099BF81E3D982300E2B654 /* CFTaskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTaskTableViewController.m; sourceTree = "<group>"; };
+		B7099BF91E3D982300E2B654 /* CFTaskTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFTaskTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 		B70661901DC0E9AD00641FCC /* TaskManager */ = {
 			isa = PBXGroup;
 			children = (
+				B7099BF51E3D977600E2B654 /* TaskTable */,
 				B70661911DC0E9AD00641FCC /* AppDelegate.h */,
 				B70661921DC0E9AD00641FCC /* AppDelegate.m */,
 				B70661971DC0E9AD00641FCC /* Assets.xcassets */,
@@ -69,6 +75,24 @@
 				B70661951DC0E9AD00641FCC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7099BF51E3D977600E2B654 /* TaskTable */ = {
+			isa = PBXGroup;
+			children = (
+				B7099BF61E3D97DB00E2B654 /* Controller */,
+			);
+			name = TaskTable;
+			sourceTree = "<group>";
+		};
+		B7099BF61E3D97DB00E2B654 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7099BF71E3D982300E2B654 /* CFTaskTableViewController.h */,
+				B7099BF81E3D982300E2B654 /* CFTaskTableViewController.m */,
+				B7099BF91E3D982300E2B654 /* CFTaskTableViewController.xib */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7099BFB1E3D982300E2B654 /* CFTaskTableViewController.xib in Resources */,
 				B70661981DC0E9AD00641FCC /* Assets.xcassets in Resources */,
 				B706619B1DC0E9AD00641FCC /* MainMenu.xib in Resources */,
 			);
@@ -143,6 +168,7 @@
 			files = (
 				B70661961DC0E9AD00641FCC /* main.m in Sources */,
 				B70661931DC0E9AD00641FCC /* AppDelegate.m in Sources */,
+				B7099BFA1E3D982300E2B654 /* CFTaskTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +316,7 @@
 				B70661A11DC0E9AD00641FCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
