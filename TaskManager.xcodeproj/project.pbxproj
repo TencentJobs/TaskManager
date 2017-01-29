@@ -13,6 +13,8 @@
 		B706619B1DC0E9AD00641FCC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70661991DC0E9AD00641FCC /* MainMenu.xib */; };
 		B7099BFA1E3D982300E2B654 /* CFTaskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7099BF81E3D982300E2B654 /* CFTaskTableViewController.m */; };
 		B7099BFB1E3D982300E2B654 /* CFTaskTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7099BF91E3D982300E2B654 /* CFTaskTableViewController.xib */; };
+		B7DA904D1E3DD6FB00229FFB /* CFMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DA904B1E3DD6FB00229FFB /* CFMainWindowController.m */; };
+		B7DA904E1E3DD6FB00229FFB /* CFMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7DA904C1E3DD6FB00229FFB /* CFMainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		B7099BF71E3D982300E2B654 /* CFTaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTaskTableViewController.h; sourceTree = "<group>"; };
 		B7099BF81E3D982300E2B654 /* CFTaskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFTaskTableViewController.m; sourceTree = "<group>"; };
 		B7099BF91E3D982300E2B654 /* CFTaskTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFTaskTableViewController.xib; sourceTree = "<group>"; };
+		B7DA904A1E3DD6FB00229FFB /* CFMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMainWindowController.h; sourceTree = "<group>"; };
+		B7DA904B1E3DD6FB00229FFB /* CFMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMainWindowController.m; sourceTree = "<group>"; };
+		B7DA904C1E3DD6FB00229FFB /* CFMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFMainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 		B70661901DC0E9AD00641FCC /* TaskManager */ = {
 			isa = PBXGroup;
 			children = (
+				B7091BC81E3DD68300621B26 /* MainWindowController */,
 				B7099BF51E3D977600E2B654 /* TaskTable */,
 				B70661911DC0E9AD00641FCC /* AppDelegate.h */,
 				B70661921DC0E9AD00641FCC /* AppDelegate.m */,
@@ -75,6 +81,16 @@
 				B70661951DC0E9AD00641FCC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7091BC81E3DD68300621B26 /* MainWindowController */ = {
+			isa = PBXGroup;
+			children = (
+				B7DA904A1E3DD6FB00229FFB /* CFMainWindowController.h */,
+				B7DA904B1E3DD6FB00229FFB /* CFMainWindowController.m */,
+				B7DA904C1E3DD6FB00229FFB /* CFMainWindowController.xib */,
+			);
+			name = MainWindowController;
 			sourceTree = "<group>";
 		};
 		B7099BF51E3D977600E2B654 /* TaskTable */ = {
@@ -121,7 +137,7 @@
 		B70661861DC0E9AD00641FCC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = TencentJobs;
 				TargetAttributes = {
 					B706618D1DC0E9AD00641FCC = {
@@ -154,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7099BFB1E3D982300E2B654 /* CFTaskTableViewController.xib in Resources */,
+				B7DA904E1E3DD6FB00229FFB /* CFMainWindowController.xib in Resources */,
 				B70661981DC0E9AD00641FCC /* Assets.xcassets in Resources */,
 				B706619B1DC0E9AD00641FCC /* MainMenu.xib in Resources */,
 			);
@@ -167,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70661961DC0E9AD00641FCC /* main.m in Sources */,
+				B7DA904D1E3DD6FB00229FFB /* CFMainWindowController.m in Sources */,
 				B70661931DC0E9AD00641FCC /* AppDelegate.m in Sources */,
 				B7099BFA1E3D982300E2B654 /* CFTaskTableViewController.m in Sources */,
 			);
@@ -204,6 +222,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -251,6 +270,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
