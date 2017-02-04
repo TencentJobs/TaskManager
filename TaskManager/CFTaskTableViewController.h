@@ -10,4 +10,6 @@
 
 @interface CFTaskTableViewController : NSViewController
 
+-(void) adjustColumnWidth;
+
 @end

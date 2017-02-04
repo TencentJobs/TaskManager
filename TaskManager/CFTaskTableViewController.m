@@ -16,11 +16,23 @@
 
 @implementation CFTaskTableViewController
 
+#pragma mark - lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
 }
 
+#pragma mark - public
+
+-(void) adjustColumnWidth {
+    NSArray<NSTableColumn *> *tableColums = [self.mainTableView tableColumns];
+    
+    for (NSTableColumn *tableColumn in tableColums){
+        [tableColumn setWidth:self.view.frame.size.width/tableColums.count];
+    }
+}
+
+# pragma mark - tableview delegate
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return 9;
 }
@@ -93,5 +105,11 @@
     [alert runModal];
     return YES;
 }
+
+//列宽度改变通知
+-(void)tableViewColumnDidResize:(NSNotification *)notification {
+
+}
+
 
 @end

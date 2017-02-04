@@ -8,7 +8,7 @@
 
 #import "CFMainWindowController.h"
 #import "CFTaskTableViewController.h"
-@interface CFMainWindowController ()
+@interface CFMainWindowController () <NSWindowDelegate>
 
 @property (nonatomic, strong) CFTaskTableViewController *taskTableViewController;
 
@@ -28,4 +28,8 @@
     [self.taskTableViewController.view setFrameSize:NSMakeSize(self.window.frame.size.width, self.window.frame.size.height)];
 }
 
+-(void)windowDidResize:(NSNotification *)notification {
+    NSLog(@"confiwangtest window did resize");
+    [self.taskTableViewController adjustColumnWidth];
+}
 @end
